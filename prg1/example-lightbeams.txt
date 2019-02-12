@@ -1,0 +1,5 @@
+# Add light sources
+add_lightbeam G1 M1
+add_lightbeam R1 M2
+add_lightbeam M1 M2
+add_lightbeam M2 B2

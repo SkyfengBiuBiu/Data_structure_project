@@ -1,0 +1,6 @@
+# Add beacons
+add_beacon G1 Lime (0,0) (0,255,0)
+add_beacon M1 Fuchsia (5,0) (255,0,255)
+add_beacon R1 Crimson (0,5) (220,20,60)
+add_beacon B2 Teal (10, 10) (0,128,128)
+add_beacon M2 Indigo (10, 5) (75,0,130)

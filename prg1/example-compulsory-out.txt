@@ -1,0 +1,65 @@
+> clear_beacons
+Cleared all beacons
+> beacon_count
+Number of beacons: 0
+> read "example-beacons.txt"
+** Commands from 'example-beacons.txt'
+> # Add beacons
+> add_beacon G1 Lime (0,0) (0,255,0)
+Lime: pos=(0,0), color=(0,255,0):1530, id=G1
+> add_beacon M1 Fuchsia (5,0) (255,0,255)
+Fuchsia: pos=(5,0), color=(255,0,255):1020, id=M1
+> add_beacon R1 Crimson (0,5) (220,20,60)
+Crimson: pos=(0,5), color=(220,20,60):840, id=R1
+> add_beacon B2 Teal (10, 10) (0,128,128)
+Teal: pos=(10,10), color=(0,128,128):896, id=B2
+> add_beacon M2 Indigo (10, 5) (75,0,130)
+Indigo: pos=(10,5), color=(75,0,130):355, id=M2
+> 
+** End of commands from 'example-beacons.txt'
+> beacon_count
+Number of beacons: 5
+> sort_alpha
+1. Crimson: pos=(0,5), color=(220,20,60):840, id=R1
+2. Fuchsia: pos=(5,0), color=(255,0,255):1020, id=M1
+3. Indigo: pos=(10,5), color=(75,0,130):355, id=M2
+4. Lime: pos=(0,0), color=(0,255,0):1530, id=G1
+5. Teal: pos=(10,10), color=(0,128,128):896, id=B2
+> min_brightness
+Indigo: pos=(10,5), color=(75,0,130):355, id=M2
+> max_brightness
+Lime: pos=(0,0), color=(0,255,0):1530, id=G1
+> sort_brightness
+1. Indigo: pos=(10,5), color=(75,0,130):355, id=M2
+2. Crimson: pos=(0,5), color=(220,20,60):840, id=R1
+3. Teal: pos=(10,10), color=(0,128,128):896, id=B2
+4. Fuchsia: pos=(5,0), color=(255,0,255):1020, id=M1
+5. Lime: pos=(0,0), color=(0,255,0):1530, id=G1
+> change_name M1 Indigo
+Indigo: pos=(5,0), color=(255,0,255):1020, id=M1
+> find_beacons Indigo
+1. Indigo: pos=(5,0), color=(255,0,255):1020, id=M1
+2. Indigo: pos=(10,5), color=(75,0,130):355, id=M2
+> read "example-lightbeams.txt"
+** Commands from 'example-lightbeams.txt'
+> # Add light sources
+> add_lightbeam G1 M1
+Added lightbeam: Lime -> Indigo
+> add_lightbeam R1 M2
+Added lightbeam: Crimson -> Indigo
+> add_lightbeam M1 M2
+Added lightbeam: Indigo -> Indigo
+> add_lightbeam M2 B2
+Added lightbeam: Indigo -> Teal
+> 
+** End of commands from 'example-lightbeams.txt'
+> lightsources M2
+1. Indigo: pos=(5,0), color=(255,0,255):1020, id=M1
+2. Crimson: pos=(0,5), color=(220,20,60):840, id=R1
+> change_color M1 (83,0,143)
+Indigo: pos=(5,0), color=(83,0,143):392, id=M1
+> path_outbeam R1
+0.    Crimson: pos=(0,5), color=(220,20,60):840, id=R1
+1. -> Indigo: pos=(10,5), color=(75,0,130):355, id=M2
+2. -> Teal: pos=(10,10), color=(0,128,128):896, id=B2
+> 

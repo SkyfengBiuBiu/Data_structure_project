@@ -1,0 +1,14 @@
+clear_beacons
+beacon_count
+read "example-beacons.txt"
+beacon_count
+sort_alpha
+min_brightness
+max_brightness
+sort_brightness
+change_name M1 Indigo
+find_beacons Indigo
+read "example-lightbeams.txt"
+lightsources M2
+change_color M1 (83,0,143)
+path_outbeam R1
