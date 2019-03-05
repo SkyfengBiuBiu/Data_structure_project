@@ -162,6 +162,14 @@ void MainWindow::update_view()
 
         auto xy = mainprg_.ds_.get_coordinates(beaconid);
         auto [x,y] = xy;
+
+        if (xy == NO_COORD)
+        {
+            x = 0; y = 0;
+            beaconcolor = Qt::magenta;
+            namecolor = Qt::magenta;
+        }
+
         auto groupitem = gscene_->createItemGroup({});
         groupitem->setPos(20*x, -20*y);
         groupitem->setFlag(QGraphicsItem::ItemIsSelectable);
@@ -246,9 +254,18 @@ void MainWindow::update_view()
             auto sources = mainprg_.ds_.get_lightsources(beaconid);
             for (auto& sourceid : sources)
             {
-                auto [vx,vy] = mainprg_.ds_.get_coordinates(sourceid);
-
+                auto vxy = mainprg_.ds_.get_coordinates(sourceid);
+                auto [vx,vy] = vxy;
                 QColor beamcolor = Qt::lightGray;
+                Qt::PenStyle penstyle = Qt::SolidLine;
+
+                if (vxy == NO_COORD)
+                {
+                    vx = 0; vy = 0;
+                    beamcolor = Qt::red;
+                    penstyle = Qt::DotLine;
+                }
+
                 if (ui->beamcolor_checkbox->isChecked())
                 {
                     auto totcol = mainprg_.ds_.total_color(sourceid);
@@ -257,7 +274,6 @@ void MainWindow::update_view()
                         beamcolor = QColor(totcol.r, totcol.g, totcol.b);
                     }
                 }
-                Qt::PenStyle penstyle = Qt::SolidLine;
                 int zvalue = -1;
                 auto linecolor = beamcolor;
                 auto arrowcolor = beamcolor;
