@@ -1,0 +1,36 @@
+# Read bigger compulsory tests
+read "biggertest-compulsory-in.txt"
+# Test remove
+beacon_count
+sort_alpha
+min_brightness
+max_brightness
+sort_brightness
+path_inbeam_longest BlueLagoon
+path_inbeam_longest Bouquet
+path_inbeam_longest VenetianRed
+path_inbeam_longest GreyAsparagus
+total_color BlueLagoon
+total_color VenetianRed
+total_color Bouquet
+total_color FreeSpeechRed
+# Remove beacons
+remove_beacon BlueLagoon
+remove_beacon Red
+remove_beacon LuckyPoint
+beacon_count
+sort_alpha
+min_brightness
+max_brightness
+sort_brightness
+find_beacons BlueLagoon
+path_inbeam_longest FreeSpeechRed
+path_inbeam_longest Bouquet
+path_inbeam_longest VenetianRed
+path_inbeam_longest GreyAsparagus
+total_color VenetianRed
+total_color Bouquet
+total_color FreeSpeechRed
+# Remove non-existing beacon
+remove_beacon xxxx
+quit

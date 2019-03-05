@@ -1,0 +1,5 @@
+# Read performance tests of compulsory operations
+read "perftest-sorting.txt"
+read "perftest-minmax.txt"
+read "perftest-change.txt"
+read "perftest-outbeam.txt"

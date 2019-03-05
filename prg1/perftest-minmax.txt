@@ -1,0 +1,2 @@
+# Test the performance of min/max, adding beacons in between
+perftest min_brightness;max_brightness;random_add 20 500 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000

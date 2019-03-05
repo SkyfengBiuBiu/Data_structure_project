@@ -1,0 +1,13 @@
+add_lightbeam Malachite Olive 
+add_lightbeam Olive DarkGreen 
+add_lightbeam Red DarkGreen 
+add_lightbeam DarkGreen VenetianRed 
+add_lightbeam FernGreen CopperRust 
+add_lightbeam CopperRust BlueLagoon 
+add_lightbeam VenetianRed FreeSpeechRed 
+add_lightbeam TyrianPurple Sangria 
+add_lightbeam Sangria FreeSpeechRed 
+add_lightbeam FreeSpeechRed BlueLagoon 
+add_lightbeam GreyAsparagus LuckyPoint 
+add_lightbeam LuckyPoint Bouquet 
+# add_lightbeam BlueLagoon Bouquet 

@@ -1,0 +1,20 @@
+# Read basic tests of compulsory operations
+read "basictest-compulsory-in.txt"
+# Test non-compulsory operations
+path_inbeam_longest G1
+path_inbeam_longest M1
+path_inbeam_longest R1
+path_inbeam_longest B2
+path_inbeam_longest M2
+total_color G1
+total_color M1
+total_color R1
+total_color B2
+total_color M2
+remove_beacon M2
+beacon_count
+total_color B2
+path_inbeam_longest B2
+path_outbeam G1
+find_beacons Indigo
+quit

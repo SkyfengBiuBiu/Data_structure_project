@@ -1,0 +1,2 @@
+# Test the performance of path_inbeam_longest
+perftest path_inbeam_longest 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000

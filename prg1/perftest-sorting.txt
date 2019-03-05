@@ -1,0 +1,2 @@
+# Test the performance of sorting, adding beacons in between
+perftest sort_alpha;sort_brightness;random_add 20 500 10;30;100;300;1000;3000;10000;30000;100000;300000

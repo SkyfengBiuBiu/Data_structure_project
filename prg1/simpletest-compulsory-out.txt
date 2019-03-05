@@ -1,0 +1,58 @@
+> # VERY simple basic test of all compulsory commands
+> # Clear the data structures and check that beacon count is zero
+> clear_beacons
+Cleared all beacons
+> beacon_count
+Number of beacons: 0
+> # Test compulsory commands with empty data
+> all_beacons
+No beacons!
+> sort_alpha
+> sort_brightness
+> min_brightness
+-- unknown --
+> max_brightness
+-- unknown --
+> find_beacons Narnia
+-- unknown --
+> # Add One Beacon and test commands
+> add_beacon Srn BaradDur (2,2) (255,100,0)
+BaradDur: pos=(2,2), color=(255,100,0):1365, id=Srn
+> beacon_count
+Number of beacons: 1
+> all_beacons
+BaradDur: pos=(2,2), color=(255,100,0):1365, id=Srn
+> sort_alpha
+BaradDur: pos=(2,2), color=(255,100,0):1365, id=Srn
+> sort_brightness
+BaradDur: pos=(2,2), color=(255,100,0):1365, id=Srn
+> min_brightness
+BaradDur: pos=(2,2), color=(255,100,0):1365, id=Srn
+> max_brightness
+BaradDur: pos=(2,2), color=(255,100,0):1365, id=Srn
+> find_beacons BaradDur
+BaradDur: pos=(2,2), color=(255,100,0):1365, id=Srn
+> change_name Srn DarkTower
+DarkTower: pos=(2,2), color=(255,100,0):1365, id=Srn
+> find_beacons BaradDur
+-- unknown --
+> find_beacons DarkTower
+DarkTower: pos=(2,2), color=(255,100,0):1365, id=Srn
+> add_beacon Agn MinasTirith (3,4) (200,200,200)
+MinasTirith: pos=(3,4), color=(200,200,200):2000, id=Agn
+> lightsources Srn
+No lightsources!
+> lightsources Agn
+No lightsources!
+> path_outbeam Srn
+DarkTower: pos=(2,2), color=(255,100,0):1365, id=Srn
+> add_lightbeam Srn Agn
+Added lightbeam: DarkTower -> MinasTirith
+> lightsources Srn
+No lightsources!
+> lightsources Agn
+DarkTower: pos=(2,2), color=(255,100,0):1365, id=Srn
+> path_outbeam Srn
+0.    DarkTower: pos=(2,2), color=(255,100,0):1365, id=Srn
+1. -> MinasTirith: pos=(3,4), color=(200,200,200):2000, id=Agn
+> quit

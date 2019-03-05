@@ -1,0 +1,263 @@
+> # Read bigger compulsory tests
+> read "biggertest-compulsory-in.txt"
+** Commands from 'biggertest-compulsory-in.txt'
+> # Read in a bigger set of beacons and lightbeams
+> clear_beacons
+Cleared all beacons
+> read "bigger-beacons.txt"
+** Commands from 'bigger-beacons.txt'
+> add_beacon Malachite Malachite (0,0) (0,211,105)
+Malachite: pos=(0,0), color=(0,211,105):1371, id=Malachite
+> add_beacon Olive Olive (6,0) (117,117,0)
+Olive: pos=(6,0), color=(117,117,0):1053, id=Olive
+> add_beacon VenetianRed VenetianRed (1,6) (193,0,35)
+VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+> add_beacon Medium Medium (4,4) Blue (37,0,206)
+Invalid parameters for command 'add_beacon'!
+> add_beacon FreeSpeechRed FreeSpeechRed (4,8) (170,25,0)
+FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+> add_beacon DarkGreen DarkGreen (9,2) (0,28,21)
+DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+> add_beacon Red Red (20,0) (249,8,0)
+Red: pos=(20,0), color=(249,8,0):795, id=Red
+> add_beacon TyrianPurple TyrianPurple (0,20) (81,0,16)
+TyrianPurple: pos=(0,20), color=(81,0,16):259, id=TyrianPurple
+> add_beacon BlueLagoon BlueLagoon (11,10) (0,101,130)
+BlueLagoon: pos=(11,10), color=(0,101,130):736, id=BlueLagoon
+> add_beacon Sangria Sangria (2,12) (145,0,14)
+Sangria: pos=(2,12), color=(145,0,14):449, id=Sangria
+> add_beacon CopperRust CopperRust (12,4) (145,72,79)
+CopperRust: pos=(12,4), color=(145,72,79):946, id=CopperRust
+> add_beacon FernGreen FernGreen (15, 6) (62,124,64)
+FernGreen: pos=(15,6), color=(62,124,64):994, id=FernGreen
+> add_beacon LuckyPoint LuckyPoint (20,20) (38,39,76)
+LuckyPoint: pos=(20,20), color=(38,39,76):424, id=LuckyPoint
+> add_beacon Bouquet Bouquet (8,24) (170,133,146)
+Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+> add_beacon GreyAsparagus GreyAsparagus (25,10) (69,84,65)
+GreyAsparagus: pos=(25,10), color=(69,84,65):776, id=GreyAsparagus
+> 
+** End of commands from 'bigger-beacons.txt'
+> read "bigger-lightbeams.txt"
+** Commands from 'bigger-lightbeams.txt'
+> add_lightbeam Malachite Olive 
+Added lightbeam: Malachite -> Olive
+> add_lightbeam Olive DarkGreen 
+Added lightbeam: Olive -> DarkGreen
+> add_lightbeam Red DarkGreen 
+Added lightbeam: Red -> DarkGreen
+> add_lightbeam DarkGreen VenetianRed 
+Added lightbeam: DarkGreen -> VenetianRed
+> add_lightbeam FernGreen CopperRust 
+Added lightbeam: FernGreen -> CopperRust
+> add_lightbeam CopperRust BlueLagoon 
+Added lightbeam: CopperRust -> BlueLagoon
+> add_lightbeam VenetianRed FreeSpeechRed 
+Added lightbeam: VenetianRed -> FreeSpeechRed
+> add_lightbeam TyrianPurple Sangria 
+Added lightbeam: TyrianPurple -> Sangria
+> add_lightbeam Sangria FreeSpeechRed 
+Added lightbeam: Sangria -> FreeSpeechRed
+> add_lightbeam FreeSpeechRed BlueLagoon 
+Added lightbeam: FreeSpeechRed -> BlueLagoon
+> add_lightbeam GreyAsparagus LuckyPoint 
+Added lightbeam: GreyAsparagus -> LuckyPoint
+> add_lightbeam LuckyPoint Bouquet 
+Added lightbeam: LuckyPoint -> Bouquet
+> # add_lightbeam BlueLagoon Bouquet 
+> 
+** End of commands from 'bigger-lightbeams.txt'
+> # Do tests
+> beacon_count
+Number of beacons: 14
+> sort_alpha
+1. BlueLagoon: pos=(11,10), color=(0,101,130):736, id=BlueLagoon
+2. Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+3. CopperRust: pos=(12,4), color=(145,72,79):946, id=CopperRust
+4. DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+5. FernGreen: pos=(15,6), color=(62,124,64):994, id=FernGreen
+6. FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+7. GreyAsparagus: pos=(25,10), color=(69,84,65):776, id=GreyAsparagus
+8. LuckyPoint: pos=(20,20), color=(38,39,76):424, id=LuckyPoint
+9. Malachite: pos=(0,0), color=(0,211,105):1371, id=Malachite
+10. Olive: pos=(6,0), color=(117,117,0):1053, id=Olive
+11. Red: pos=(20,0), color=(249,8,0):795, id=Red
+12. Sangria: pos=(2,12), color=(145,0,14):449, id=Sangria
+13. TyrianPurple: pos=(0,20), color=(81,0,16):259, id=TyrianPurple
+14. VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+> min_brightness
+DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+> max_brightness
+Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+> sort_brightness
+1. DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+2. TyrianPurple: pos=(0,20), color=(81,0,16):259, id=TyrianPurple
+3. LuckyPoint: pos=(20,20), color=(38,39,76):424, id=LuckyPoint
+4. Sangria: pos=(2,12), color=(145,0,14):449, id=Sangria
+5. VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+6. FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+7. BlueLagoon: pos=(11,10), color=(0,101,130):736, id=BlueLagoon
+8. GreyAsparagus: pos=(25,10), color=(69,84,65):776, id=GreyAsparagus
+9. Red: pos=(20,0), color=(249,8,0):795, id=Red
+10. CopperRust: pos=(12,4), color=(145,72,79):946, id=CopperRust
+11. FernGreen: pos=(15,6), color=(62,124,64):994, id=FernGreen
+12. Olive: pos=(6,0), color=(117,117,0):1053, id=Olive
+13. Malachite: pos=(0,0), color=(0,211,105):1371, id=Malachite
+14. Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+> find_beacons TyrianPurple
+TyrianPurple: pos=(0,20), color=(81,0,16):259, id=TyrianPurple
+> find_beacons FreeSpeechRed
+FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+> lightsources FreeSpeechRed
+1. Sangria: pos=(2,12), color=(145,0,14):449, id=Sangria
+2. VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+> lightsources Red
+No lightsources!
+> lightsources NoColor
+-- unknown --
+> path_outbeam GreyAsparagus
+0.    GreyAsparagus: pos=(25,10), color=(69,84,65):776, id=GreyAsparagus
+1. -> LuckyPoint: pos=(20,20), color=(38,39,76):424, id=LuckyPoint
+2. -> Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+> path_outbeam Red
+0.    Red: pos=(20,0), color=(249,8,0):795, id=Red
+1. -> DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+2. -> VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+3. -> FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+4. -> BlueLagoon: pos=(11,10), color=(0,101,130):736, id=BlueLagoon
+> path_outbeam Bouquet
+Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+> path_outbeam TyrianPurple
+0.    TyrianPurple: pos=(0,20), color=(81,0,16):259, id=TyrianPurple
+1. -> Sangria: pos=(2,12), color=(145,0,14):449, id=Sangria
+2. -> FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+3. -> BlueLagoon: pos=(11,10), color=(0,101,130):736, id=BlueLagoon
+> quit
+** End of commands from 'biggertest-compulsory-in.txt'
+> # Test remove
+> beacon_count
+Number of beacons: 14
+> sort_alpha
+1. BlueLagoon: pos=(11,10), color=(0,101,130):736, id=BlueLagoon
+2. Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+3. CopperRust: pos=(12,4), color=(145,72,79):946, id=CopperRust
+4. DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+5. FernGreen: pos=(15,6), color=(62,124,64):994, id=FernGreen
+6. FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+7. GreyAsparagus: pos=(25,10), color=(69,84,65):776, id=GreyAsparagus
+8. LuckyPoint: pos=(20,20), color=(38,39,76):424, id=LuckyPoint
+9. Malachite: pos=(0,0), color=(0,211,105):1371, id=Malachite
+10. Olive: pos=(6,0), color=(117,117,0):1053, id=Olive
+11. Red: pos=(20,0), color=(249,8,0):795, id=Red
+12. Sangria: pos=(2,12), color=(145,0,14):449, id=Sangria
+13. TyrianPurple: pos=(0,20), color=(81,0,16):259, id=TyrianPurple
+14. VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+> min_brightness
+DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+> max_brightness
+Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+> sort_brightness
+1. DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+2. TyrianPurple: pos=(0,20), color=(81,0,16):259, id=TyrianPurple
+3. LuckyPoint: pos=(20,20), color=(38,39,76):424, id=LuckyPoint
+4. Sangria: pos=(2,12), color=(145,0,14):449, id=Sangria
+5. VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+6. FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+7. BlueLagoon: pos=(11,10), color=(0,101,130):736, id=BlueLagoon
+8. GreyAsparagus: pos=(25,10), color=(69,84,65):776, id=GreyAsparagus
+9. Red: pos=(20,0), color=(249,8,0):795, id=Red
+10. CopperRust: pos=(12,4), color=(145,72,79):946, id=CopperRust
+11. FernGreen: pos=(15,6), color=(62,124,64):994, id=FernGreen
+12. Olive: pos=(6,0), color=(117,117,0):1053, id=Olive
+13. Malachite: pos=(0,0), color=(0,211,105):1371, id=Malachite
+14. Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+> path_inbeam_longest BlueLagoon
+0.    Malachite: pos=(0,0), color=(0,211,105):1371, id=Malachite
+1. -> Olive: pos=(6,0), color=(117,117,0):1053, id=Olive
+2. -> DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+3. -> VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+4. -> FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+5. -> BlueLagoon: pos=(11,10), color=(0,101,130):736, id=BlueLagoon
+> path_inbeam_longest Bouquet
+0.    GreyAsparagus: pos=(25,10), color=(69,84,65):776, id=GreyAsparagus
+1. -> LuckyPoint: pos=(20,20), color=(38,39,76):424, id=LuckyPoint
+2. -> Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+> path_inbeam_longest VenetianRed
+0.    Malachite: pos=(0,0), color=(0,211,105):1371, id=Malachite
+1. -> Olive: pos=(6,0), color=(117,117,0):1053, id=Olive
+2. -> DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+3. -> VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+> path_inbeam_longest GreyAsparagus
+GreyAsparagus: pos=(25,10), color=(69,84,65):776, id=GreyAsparagus
+> total_color BlueLagoon
+Total color of BlueLagoon: (82,72,71)
+> total_color VenetianRed
+Total color of VenetianRed: (147,33,29)
+> total_color Bouquet
+Total color of Bouquet: (111,97,108)
+> total_color FreeSpeechRed
+Total color of FreeSpeechRed: (143,19,14)
+> # Remove beacons
+> remove_beacon BlueLagoon
+BlueLagoon removed.
+> remove_beacon Red
+Red removed.
+> remove_beacon LuckyPoint
+LuckyPoint removed.
+> beacon_count
+Number of beacons: 11
+> sort_alpha
+1. Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+2. CopperRust: pos=(12,4), color=(145,72,79):946, id=CopperRust
+3. DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+4. FernGreen: pos=(15,6), color=(62,124,64):994, id=FernGreen
+5. FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+6. GreyAsparagus: pos=(25,10), color=(69,84,65):776, id=GreyAsparagus
+7. Malachite: pos=(0,0), color=(0,211,105):1371, id=Malachite
+8. Olive: pos=(6,0), color=(117,117,0):1053, id=Olive
+9. Sangria: pos=(2,12), color=(145,0,14):449, id=Sangria
+10. TyrianPurple: pos=(0,20), color=(81,0,16):259, id=TyrianPurple
+11. VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+> min_brightness
+DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+> max_brightness
+Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+> sort_brightness
+1. DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+2. TyrianPurple: pos=(0,20), color=(81,0,16):259, id=TyrianPurple
+3. Sangria: pos=(2,12), color=(145,0,14):449, id=Sangria
+4. VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+5. FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+6. GreyAsparagus: pos=(25,10), color=(69,84,65):776, id=GreyAsparagus
+7. CopperRust: pos=(12,4), color=(145,72,79):946, id=CopperRust
+8. FernGreen: pos=(15,6), color=(62,124,64):994, id=FernGreen
+9. Olive: pos=(6,0), color=(117,117,0):1053, id=Olive
+10. Malachite: pos=(0,0), color=(0,211,105):1371, id=Malachite
+11. Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+> find_beacons BlueLagoon
+-- unknown --
+> path_inbeam_longest FreeSpeechRed
+0.    Malachite: pos=(0,0), color=(0,211,105):1371, id=Malachite
+1. -> Olive: pos=(6,0), color=(117,117,0):1053, id=Olive
+2. -> DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+3. -> VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+4. -> FreeSpeechRed: pos=(4,8), color=(170,25,0):660, id=FreeSpeechRed
+> path_inbeam_longest Bouquet
+Bouquet: pos=(8,24), color=(170,133,146):1454, id=Bouquet
+> path_inbeam_longest VenetianRed
+0.    Malachite: pos=(0,0), color=(0,211,105):1371, id=Malachite
+1. -> Olive: pos=(6,0), color=(117,117,0):1053, id=Olive
+2. -> DarkGreen: pos=(9,2), color=(0,28,21):189, id=DarkGreen
+3. -> VenetianRed: pos=(1,6), color=(193,0,35):614, id=VenetianRed
+> path_inbeam_longest GreyAsparagus
+GreyAsparagus: pos=(25,10), color=(69,84,65):776, id=GreyAsparagus
+> total_color VenetianRed
+Total color of VenetianRed: (111,48,35)
+> total_color Bouquet
+Total color of Bouquet: (170,133,146)
+> total_color FreeSpeechRed
+Total color of FreeSpeechRed: (131,24,16)
+> # Remove non-existing beacon
+> remove_beacon xxxx
+-- unknown --
+> quit

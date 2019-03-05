@@ -1,0 +1,32 @@
+# VERY simple basic test of all compulsory commands
+# Clear the data structures and check that beacon count is zero
+clear_beacons
+beacon_count
+# Test compulsory commands with empty data
+all_beacons
+sort_alpha
+sort_brightness
+min_brightness
+max_brightness
+find_beacons Narnia
+# Add One Beacon and test commands
+add_beacon Srn BaradDur (2,2) (255,100,0)
+beacon_count
+all_beacons
+sort_alpha
+sort_brightness
+min_brightness
+max_brightness
+find_beacons BaradDur
+change_name Srn DarkTower
+find_beacons BaradDur
+find_beacons DarkTower
+add_beacon Agn MinasTirith (3,4) (200,200,200)
+lightsources Srn
+lightsources Agn
+path_outbeam Srn
+add_lightbeam Srn Agn
+lightsources Srn
+lightsources Agn
+path_outbeam Srn
+quit

@@ -1,0 +1,17 @@
+# VERY simple basic test of all (compulsory+non-compulsory) commands
+# Test all compulsory commands
+read "simpletest-compulsory-in.txt"
+# Test non-compulsory commands
+path_inbeam_longest Agn
+total_color Srn
+total_color Agn
+remove_beacon Srn
+beacon_count
+find_beacons DarkTower
+lightsources Agn
+path_inbeam_longest Agn
+min_brightness
+sort_alpha
+sort_brightness
+total_color Agn
+beacon_count

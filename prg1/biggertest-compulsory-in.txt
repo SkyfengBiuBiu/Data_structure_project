@@ -1,0 +1,20 @@
+# Read in a bigger set of beacons and lightbeams
+clear_beacons
+read "bigger-beacons.txt"
+read "bigger-lightbeams.txt"
+# Do tests
+beacon_count
+sort_alpha
+min_brightness
+max_brightness
+sort_brightness
+find_beacons TyrianPurple
+find_beacons FreeSpeechRed
+lightsources FreeSpeechRed
+lightsources Red
+lightsources NoColor
+path_outbeam GreyAsparagus
+path_outbeam Red
+path_outbeam Bouquet
+path_outbeam TyrianPurple
+quit

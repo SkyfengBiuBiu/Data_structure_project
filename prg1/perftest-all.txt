@@ -1,0 +1,4 @@
+# Read performance tests of all operations
+read "perftest-compulsory.txt"
+read "perftest-inbeam.txt"
+read "perftest-totalcolor.txt"
