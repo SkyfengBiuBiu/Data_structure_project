@@ -98,7 +98,7 @@ struct Beacon {
 //
 struct SortedByName
 {
-    bool operator()(Beacon* p1, Beacon* p2)
+    bool operator()( Beacon* p1,  Beacon* p2)const
     {
         return  p1->name < p2->name;
     }
@@ -107,7 +107,7 @@ struct SortedByName
 struct SortedByBrightness
 {
 
-    bool operator()(Beacon* p1, Beacon* p2)
+    bool operator()( Beacon* p1,Beacon* p2)const
     {
         int brightness1=3*(p1->color.r)+6*(p1->color.g)+(p1->color.b);
         int brightness2=3*(p2->color.r)+6*(p2->color.g)+(p2->color.b);

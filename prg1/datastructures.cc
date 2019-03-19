@@ -45,7 +45,7 @@ Datastructures::~Datastructures() {
 }
 
 int Datastructures::beacon_count() {
-    return beaid_beacons.size();
+    return int(beaid_beacons.size());
 }
 
 void Datastructures::clear_beacons() {
@@ -173,6 +173,7 @@ bool Datastructures::change_beacon_name(BeaconID id, const std::string &newname)
         return true;
     }
     catch (const std::out_of_range &e) {
+        (void)e;
         return false;
     }
 
@@ -190,7 +191,8 @@ bool Datastructures::change_beacon_color(BeaconID id, Color newcolor) {
         alphalist_valid = brightness_valid = false;
         return true;
     }
-    catch (const std::out_of_range &e) {
+    catch ( const std::out_of_range &e) {
+        (void)e;
         return false;
     }
 
@@ -355,7 +357,7 @@ Color Datastructures::acculateColor(Color c, Colorcollection colorCollection) {
     total_g += c.g;
     total_b += c.b;
 
-    int v_size = colorCollection.size() + 1;
+    int v_size = int(colorCollection.size()) + 1;
     //Sum up the colors and calculate  the total average color
     return Color{(total_r / v_size), (total_g / v_size), (total_b / v_size)};
 }
@@ -369,6 +371,7 @@ void Datastructures::averageColor(BeaconID targetId, BeaconID leaf, Color &color
         vec=get_lightsources_no_sort(root);
         vec.erase(remove(vec.begin(), vec.end(), leaf), vec.end());
     }catch (const std::out_of_range& e) {
+        (void)e;
         return;
     }
 
